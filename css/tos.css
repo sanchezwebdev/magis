@@ -1,0 +1,18 @@
+.page-section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tos-title{
+    color: white
+}
+.tos{
+    margin-top: 2%;    
+    text-align: center;
+    width: 60%;
+    text-align: start;
+    color: #ced4da;
+    font-size: 16px;
+}
