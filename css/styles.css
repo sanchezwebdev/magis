@@ -12435,19 +12435,13 @@ section#contact form#contactForm :-ms-input-placeholder {
   top: 0;
   left: 0;
   width: 100%;
-  /* Make the video cover the entire viewport */
-  height: 101%;
-  /* max-height: 1000px; */
-  /* Make the video cover the entire viewport */
+  height: 101%;  
   object-fit: cover;
-  z-index: -1;
-  /* Place the video behind other content */
-   /* opacity: 0; */
+  z-index: -1;   
   transition: opacity 1s ease-in-out;
 }
 
-#services {
-  /* background-image: url(../assets/img/header-bg.jpg); */
+#services {  
   background: linear-gradient(180deg, rgba(11, 20, 45) 0%, rgba(40, 58, 116) 100%);
 }
 
