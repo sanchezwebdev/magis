@@ -2,6 +2,7 @@
 
 Welcome to the **Magis Web Services** single-page application!  
 This project showcases a modern, responsive, and fully functional website designed to highlight a full-service web development business.
+![Hero Section](https://res.cloudinary.com/dyivstfjt/image/upload/v1751935396/Screenshot_2025-07-07_194302_bqrh0g.png)
 
 ## 🌟 Overview
 

@@ -1,3 +1,4 @@
+//  Navbar shrink and behavior on scroll 
 window.addEventListener("DOMContentLoaded", (event) => {
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
@@ -12,9 +13,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   navbarShrink();
-
   document.addEventListener("scroll", navbarShrink);
 
+  //  Activate Bootstrap scrollspy 
   const mainNav = document.body.querySelector("#mainNav");
   if (mainNav) {
     new bootstrap.ScrollSpy(document.body, {
@@ -23,6 +24,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
+  //  Collapse responsive navbar when a link is clicked 
   const navbarToggler = document.body.querySelector(".navbar-toggler");
   const responsiveNavItems = [].slice.call(
     document.querySelectorAll("#navbarResponsive .nav-link")
@@ -36,6 +38,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+//  Contact form data storage 
 const formData = {
   firstName: "",
   email: "",
@@ -43,11 +46,13 @@ const formData = {
   message: "",
 };
 
+//  Handle input changes 
 const handleInputChange = (e) => {
   const { name, value } = e.target;
   formData[name] = value;
 };
 
+//  Validate form fields 
 const validateForm = () => {
   const { firstName, email, phone, message } = formData;
   let errors = [];
@@ -69,6 +74,7 @@ const validateForm = () => {
   return true;
 };
 
+//  Fetch environment variables (from external service) 
 const fetchEnvVariables = async () => {
   try {
     const response = await fetch(
@@ -84,6 +90,7 @@ const fetchEnvVariables = async () => {
   }
 };
 
+//  Handle form submission and email sending 
 const handleSubmit = async (e) => {
   e.preventDefault();
   if (validateForm()) {
@@ -100,9 +107,9 @@ const handleSubmit = async (e) => {
 
       const env = await fetchEnvVariables();
 
-      const SERVICE_ID="service_unejne8"
-      const TEMPLATE_ID="template_0mmtnxl"
-      const PUBLIC_KEY="qn0fZOYhWEb0Qr1Vl"
+      const SERVICE_ID = "service_unejne8";
+      const TEMPLATE_ID = "template_0mmtnxl";
+      const PUBLIC_KEY = "qn0fZOYhWEb0Qr1Vl";
 
       formDataToSend.append("service_id", SERVICE_ID);
       formDataToSend.append("template_id", TEMPLATE_ID);
